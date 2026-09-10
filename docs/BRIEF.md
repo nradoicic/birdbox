@@ -1,15 +1,9 @@
-# The brief
+# BirdBox
 
-Describe the board you want: what it does, the parts it must use, the
-interfaces it exposes, and the constraints that bound the layout.
+I would like to make an ESP32 backed project that reads a card scan from an RDM630 and moves a servo based on some logic.
 
-A hosted `create` run overwrites this file with the brief you typed in the
-console, then works from it.
+  The device will run on a battery pack and needs to run as long as possible.  The device will need a real time clock, to allow the device to turn off at night to save power.
+  Power to the RDM and servo should be gated to prevent power draw when not needed.
 
-## What makes a brief usable
-
-- **Parts** by designator where you care, and by function where you do not.
-- **Power**: what comes in, what rails come out, and how much current.
-- **Interfaces**: every connector and bus, and what is on it.
-- **Constraints**: layer count, board outline, assembly method, and anything
-  the board must not do.
+  The RDM and servo should draw independent power from the battery, which should come in on microUSB.
+  The ESP32 should also have a USB jack and buttons so it can be flashed.
